@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mord in Datenhausen – Fallakte</title>
+<style>
+  :root { --bg:#faf7f5; --panel:#fff8f4; --border:#e8d8cc; --accent:#bf4d00; --blue:#1a5fa5; --green:#2a7a3a; --red:#c0392b; --text:#1a0a00; --muted:#7a6050; --yellow:#946800; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--text); font-family:'Segoe UI',system-ui,sans-serif; line-height:1.6; padding:0 0 60px; }
+  header { background:#fff8f4; border-top:4px solid var(--accent); border-bottom:1.5px solid var(--border); padding:40px 24px; text-align:center; }
+  .stamp { display:inline-block; border:2.5px solid var(--red); color:var(--red); font-size:0.75rem; font-weight:900; letter-spacing:4px; padding:4px 12px; transform:rotate(-5deg); margin-bottom:12px; }
+  header h1 { font-size:2.4rem; font-weight:900; color:var(--accent); }
+  header p  { color:var(--muted); margin-top:8px; font-style:italic; }
+  .container { max-width:860px; margin:0 auto; padding:0 20px; }
+  section { margin-top:36px; }
+  h2 { font-size:1.2rem; font-weight:700; color:var(--accent); border-left:3px solid var(--accent); padding-left:12px; margin-bottom:16px; text-transform:uppercase; letter-spacing:1px; }
+  h3 { font-size:1rem; font-weight:700; color:var(--blue); margin:20px 0 10px; }
+  p, li { color:#3a1800; margin-bottom:10px; }
+  ul, ol { padding-left:24px; }
+  .callout { background:var(--panel); border:1px solid var(--border); border-left:4px solid var(--accent); border-radius:6px; padding:16px 20px; margin:16px 0; }
+  .callout.blue  { border-left-color:var(--blue); }
+  .callout.green { border-left-color:var(--green); }
+  .callout.red   { border-left-color:var(--red); }
+  .callout strong { color:var(--accent); }
+  .callout.blue  strong { color:var(--blue); }
+  .callout.green strong { color:var(--green); }
+  code { background:#f0e8e0; border:1px solid var(--border); border-radius:4px; padding:2px 7px; font-family:'Courier New',monospace; font-size:0.88em; color:#1a5fa5; }
+  pre { background:#f5ede6; border:1px solid var(--border); border-radius:8px; padding:16px; overflow-x:auto; margin:12px 0; }
+  pre code { background:none; border:none; padding:0; color:var(--text); font-size:0.9rem; }
+  .kw  { color:#c0392b; font-weight:700; }
+  .fn  { color:#6a3a9a; }
+  .st  { color:#1a5fa5; }
+  .cm  { color:#7a6050; font-style:italic; }
+  .num { color:#2a7a6a; }
+  table { width:100%; border-collapse:collapse; font-size:0.88rem; margin:12px 0; }
+  th { background:#f0e8e0; color:var(--accent); text-align:left; padding:8px 12px; border-bottom:2px solid var(--border); font-weight:700; }
+  td { padding:7px 12px; border-bottom:1px solid var(--border); color:#3a1800; }
+  tr:last-child td { border-bottom:none; }
+  .badge { display:inline-block; font-size:0.72rem; font-weight:700; padding:2px 8px; border-radius:12px; margin-right:4px; }
+  .badge.pk  { background:#e0f0e4; color:#1a5a28; border:1px solid #2a7a3a; }
+  .badge.fk  { background:#e0ecf8; color:#0a3d78; border:1px solid #1a5fa5; }
+  .badge.typ { background:#f0e8e0; color:#7a6050; border:1px solid var(--border); }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media(max-width:600px){ .grid { grid-template-columns:1fr; } }
+  .step { display:flex; gap:16px; align-items:flex-start; margin-bottom:16px; }
+  .step-num { background:var(--accent); color:#fff; font-weight:900; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.9rem; }
+  .tool-box { background:var(--panel); border:1px solid var(--border); border-radius:8px; padding:14px 18px; }
+  .tool-box h4 { color:var(--text); font-size:0.9rem; margin-bottom:6px; font-weight:700; }
+  footer { margin-top:60px; border-top:1px solid var(--border); padding:20px; text-align:center; color:var(--muted); font-size:0.8rem; }
+</style>
+</head>
+<body>
+<header>
+  <div class="stamp">VERTRAULICH – POLIZEI DATENHAUSEN</div>
+  <h1>🔍 Mord in Datenhausen</h1>
+</header>
+
+<div class="container">
+
+  <section>
+    <h2>Die Geschichte</h2>
+    <div class="callout">
+      <p>Es ist der 16. Januar 2024. In Datenhausen herrscht angespannte Stille. Die Nacht zuvor wurde ein Mord begangen – und der Täter ist noch auf freiem Fuß.</p>
+      <p>Ermittlerin <strong>Dr. Datenbank</strong> gibt dir Zugang zum kompletten Polizeidatensystem. Dein Auftrag: Finde mit SQL-Abfragen den Täter – und die Person, die hinter allem steckt.</p>
+      <p style="margin-top:12px;"><em>„Du weißt nur: Es war ein <strong>Mord</strong>. Er fand am <strong>15. Januar 2024</strong> in <strong>Datenhausen</strong> statt. Der Rest steckt in der Datenbank."</em></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>So startest du</h2>
+    <div class="callout">
+      <p>Gehe zu <a href="https://sql-ide.de/" target="_blank" rel="noopener noreferrer">SQL-IDE</a>. Dort ist die Datenbank vorbereitet.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Die Datenbank – Tabellenübersicht</h2>
+    <p>Die Polizeidatenbank von Datenhausen enthält <strong>9 Tabellen</strong> mit insgesamt über 15.000 Datensätzen. Ein manuelles Durchsuchen ist nicht möglich – du brauchst SQL.</p>
+
+    <h3>tatortberichte</h3>
+    <table>
+      <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
+      <tr><td>datum</td><td><span class="badge typ">DATE</span></td><td>Datum im Format JJJJ-MM-TT (z. B. '2024-01-15')</td></tr>
+      <tr><td>typ</td><td><span class="badge typ">VARCHAR(50)</span></td><td>Art des Vorfalls (Mord, Diebstahl, …)</td></tr>
+      <tr><td>beschreibung</td><td><span class="badge typ">VARCHAR(500)</span></td><td>Beschreibung des Tatorts</td></tr>
+      <tr><td>stadt</td><td><span class="badge typ">VARCHAR(100)</span></td><td>Stadt des Vorfalls</td></tr>
+    </table>
+
+    <h3>personen</h3>
+    <table>
+      <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
+      <tr><td>id</td><td><span class="badge pk">PK</span> <span class="badge typ">INTEGER</span></td><td>Eindeutige Personen-ID</td></tr>
+      <tr><td>vorname</td><td><span class="badge typ">VARCHAR(50)</span></td><td>Vorname</td></tr>
+      <tr><td>nachname</td><td><span class="badge typ">VARCHAR(50)</span></td><td>Nachname</td></tr>
+      <tr><td>hausnummer</td><td><span class="badge typ">INTEGER</span></td><td>Hausnummer der Wohnadresse</td></tr>
+      <tr><td>strassenname</td><td><span class="badge typ">VARCHAR(100)</span></td><td>Straßenname der Wohnadresse</td></tr>
+      <tr><td>svnummer</td><td><span class="badge typ">VARCHAR(20)</span></td><td>Sozialversicherungsnummer → einkommen(svnummer)</td></tr>
+    </table>
+
+    <h3>personenmerkmale &nbsp;<small style="color:var(--muted);font-weight:400">(1:1 mit personen)</small></h3>
+    <table>
+      <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
+      <tr><td>personen_id</td><td><span class="badge pk">PK</span> <span class="badge fk">FK</span> <span class="badge typ">INTEGER</span></td><td>→ personen(id) – gleichzeitig PK und FK</td></tr>
+      <tr><td>alter_jahre</td><td><span class="badge typ">INTEGER</span></td><td>Alter der Person</td></tr>
+      <tr><td>koerpergroesse</td><td><span class="badge typ">DOUBLE</span></td><td>Körpergröße in cm</td></tr>
+      <tr><td>augenfarbe</td><td><span class="badge typ">VARCHAR(20)</span></td><td>blau · braun · grün · grau · graugrün</td></tr>
+      <tr><td>haarfarbe</td><td><span class="badge typ">VARCHAR(20)</span></td><td>blond · braun · schwarz · rot · grau · weiß · dunkelbraun</td></tr>
+      <tr><td>geschlecht</td><td><span class="badge typ">VARCHAR(20)</span></td><td>männlich · weiblich</td></tr>
+    </table>
+
+    <h3>fahrzeuge &nbsp;<small style="color:var(--muted);font-weight:400">(1:N mit personen)</small></h3>
+    <table>
+      <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
+      <tr><td>id</td><td><span class="badge pk">PK</span> <span class="badge typ">INTEGER</span></td><td>Eindeutige Fahrzeug-ID</td></tr>
+      <tr><td>personen_id</td><td><span class="badge fk">FK</span> <span class="badge typ">INTEGER</span></td><td>→ personen(id)</td></tr>
+      <tr><td>kennzeichen</td><td><span class="badge typ">VARCHAR(20)</span></td><td>Kfz-Kennzeichen</td></tr>
+      <tr><td>automarke</td><td><span class="badge typ">VARCHAR(50)</span></td><td>Hersteller des Fahrzeugs</td></tr>
+      <tr><td>automodell</td><td><span class="badge typ">VARCHAR(50)</span></td><td>Modell des Fahrzeugs</td></tr>
+    </table>
+
+    <h3>einkommen</h3>
+    <table>
+      <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
+      <tr><td>svnummer</td><td><span class="badge pk">PK</span> <span class="badge typ">VARCHAR(20)</span></td><td>Sozialversicherungsnummer</td></tr>
+      <tr><td>jahreseinkommen</td><td><span class="badge typ">INTEGER</span></td><td>Jahreseinkommen in Euro</td></tr>
+    </table>
+
+    <h3>veranstaltungen</h3>
+    <table>
+      <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
+      <tr><td>id</td><td><span class="badge pk">PK</span> <span class="badge typ">INTEGER</span></td><td>Veranstaltungs-ID</td></tr>
+      <tr><td>name</td><td><span class="badge typ">VARCHAR(100)</span></td><td>Name der Veranstaltung</td></tr>
+      <tr><td>datum</td><td><span class="badge typ">DATE</span></td><td>Datum der Veranstaltung</td></tr>
+      <tr><td>ort</td><td><span class="badge typ">VARCHAR(100)</span></td><td>Veranstaltungsort</td></tr>
+    </table>
+
+    <h3>veranstaltungsbesuche &nbsp;<small style="color:var(--muted);font-weight:400">(Zwischentabelle)</small></h3>
+    <table>
+      <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
+      <tr><td>personen_id</td><td><span class="badge fk">FK</span> <span class="badge typ">INTEGER</span></td><td>→ personen(id)</td></tr>
+      <tr><td>veranstaltungs_id</td><td><span class="badge fk">FK</span> <span class="badge typ">INTEGER</span></td><td>→ veranstaltungen(id)</td></tr>
+    </table>
+
+    <h3>fitmaxx_mitglieder</h3>
+    <table>
+      <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
+      <tr><td>id</td><td><span class="badge pk">PK</span> <span class="badge typ">VARCHAR(10)</span></td><td>Mitgliedsausweis-Nummer (z. B. „48ZX4F")</td></tr>
+      <tr><td>personen_id</td><td><span class="badge fk">FK</span> <span class="badge typ">INTEGER</span></td><td>→ personen(id)</td></tr>
+      <tr><td>name</td><td><span class="badge typ">VARCHAR(100)</span></td><td>Name des Mitglieds</td></tr>
+      <tr><td>beitrittsdatum</td><td><span class="badge typ">DATE</span></td><td>Beitrittsdatum</td></tr>
+      <tr><td>mitgliedsstatus</td><td><span class="badge typ">VARCHAR(20)</span></td><td>bronze · silber · gold</td></tr>
+    </table>
+
+    <h3>fitmaxx_besuche</h3>
+    <table>
+      <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
+      <tr><td>mitgliedsid</td><td><span class="badge fk">FK</span> <span class="badge typ">VARCHAR(10)</span></td><td>→ fitmaxx_mitglieder(id)</td></tr>
+      <tr><td>besuchsdatum</td><td><span class="badge typ">DATE</span></td><td>Datum des Besuchs</td></tr>
+      <tr><td>eincheckzeit</td><td><span class="badge typ">INTEGER</span></td><td>Uhrzeit des Einchecks (z. B. 800 = 8:00 Uhr)</td></tr>
+      <tr><td>auscheckzeit</td><td><span class="badge typ">INTEGER</span></td><td>Uhrzeit des Auschecks</td></tr>
+    </table>
+
+    <h3>zeugenaussagen</h3>
+    <table>
+      <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
+      <tr><td>personen_id</td><td><span class="badge fk">FK</span> <span class="badge typ">INTEGER</span></td><td>→ personen(id)</td></tr>
+      <tr><td>aussage</td><td><span class="badge typ">VARCHAR(1000)</span></td><td>Aussage der Person gegenüber der Polizei</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Erste Abfrage – Los geht's!</h2>
+    <p>Du erinnerst dich: <em>Mord, 15. Januar 2024, Datenhausen.</em> Starte deine Ermittlung mit dieser Abfrage:</p>
+    <pre><code><span class="kw">SELECT</span> *
+<span class="kw">FROM</span>   tatortberichte
+<span class="kw">WHERE</span>  typ   = <span class="st">'Mord'</span>
+  <span class="kw">AND</span>  datum  = <span class="st">'2024-01-15'</span>
+  <span class="kw">AND</span>  stadt  = <span class="st">'Datenhausen'</span>;</code></pre>
+    <div class="callout green">
+      <strong>Hinweis:</strong> Notiere dir die Informationen aus dem Tatortbericht – sie sind der Schlüssel zu den nächsten Schritten. Notiere dir alle wichtigen Zwischenergebnisse!
+    </div>
+  </section>
+
+  <section>
+    <h2>Regeln der Ermittlung</h2>
+    <ul>
+      <li>Du darfst <strong>ausschließlich SQL-Abfragen</strong> verwenden – kein manuelles Durchsuchen der Rohdaten.</li>
+      <li>Jede Abfrage ist ein Ermittlungsschritt. Notiere, was du herausgefunden hast.</li>
+      <li>Der Fall hat <strong>zwei Ebenen</strong>: Wer hat die Tat begangen – und wer steckt dahinter?</li>
+    </ul>
+  </section>
+
+
+</div>
+<footer>Mord in Datenhausen · Deutsche Adaption des SQL Murder Mystery (Knight Lab, CC BY-SA 4.0) · Inf 10 NTG Bayern</footer>
+</body>
+</html>
