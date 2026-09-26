@@ -98,7 +98,7 @@
       <tr><td>svnummer</td><td><span class="badge typ">VARCHAR(20)</span></td><td>Sozialversicherungsnummer → einkommen(svnummer)</td></tr>
     </table>
 
-    <h3>personenmerkmale &nbsp;<small style="color:var(--muted);font-weight:400">(1:1 mit personen)</small></h3>
+    <h3>personenmerkmale &nbsp;<small style="color:var(--muted);font-weight:400">(Verbindung mit personen)</small></h3>
     <table>
       <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
       <tr><td>id</td><td><span class="badge pk">PK</span> <span class="badge typ">INTEGER</span></td><td>Eindeutige ID des Merkmal-Eintrags</td></tr>
@@ -110,7 +110,7 @@
       <tr><td>geschlecht</td><td><span class="badge typ">VARCHAR(20)</span></td><td>männlich · weiblich</td></tr>
     </table>
 
-    <h3>fahrzeuge &nbsp;<small style="color:var(--muted);font-weight:400">(1:N mit personen)</small></h3>
+    <h3>fahrzeuge &nbsp;<small style="color:var(--muted);font-weight:400">(Verbindung mit personen)</small></h3>
     <table>
       <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
       <tr><td>id</td><td><span class="badge pk">PK</span> <span class="badge typ">INTEGER</span></td><td>Eindeutige Fahrzeug-ID</td></tr>
@@ -127,20 +127,13 @@
       <tr><td>jahreseinkommen</td><td><span class="badge typ">INTEGER</span></td><td>Jahreseinkommen in Euro</td></tr>
     </table>
 
-    <h3>veranstaltungen</h3>
+    <h3>veranstaltungen &nbsp;<small style="color:var(--muted);font-weight:400">(Verbindung mit personen)</h3>
     <table>
       <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
       <tr><td>id</td><td><span class="badge pk">PK</span> <span class="badge typ">INTEGER</span></td><td>Veranstaltungs-ID</td></tr>
       <tr><td>name</td><td><span class="badge typ">VARCHAR(100)</span></td><td>Name der Veranstaltung</td></tr>
       <tr><td>datum</td><td><span class="badge typ">DATE</span></td><td>Datum der Veranstaltung</td></tr>
       <tr><td>ort</td><td><span class="badge typ">VARCHAR(100)</span></td><td>Veranstaltungsort</td></tr>
-    </table>
-
-    <h3>veranstaltungsbesuche &nbsp;<small style="color:var(--muted);font-weight:400">(Zwischentabelle)</small></h3>
-    <table>
-      <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
-      <tr><td>personen_id</td><td><span class="badge fk">FK</span> <span class="badge typ">INTEGER</span></td><td>→ personen(id)</td></tr>
-      <tr><td>veranstaltungs_id</td><td><span class="badge fk">FK</span> <span class="badge typ">INTEGER</span></td><td>→ veranstaltungen(id)</td></tr>
     </table>
 
     <h3>fitmaxx_mitglieder</h3>
