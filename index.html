@@ -119,8 +119,8 @@
       <tr><td>automarke</td><td><span class="badge typ">VARCHAR(50)</span></td><td>Hersteller des Fahrzeugs</td></tr>
       <tr><td>automodell</td><td><span class="badge typ">VARCHAR(50)</span></td><td>Modell des Fahrzeugs</td></tr>
     </table>
-
-    <h3>einkommen</h3>
+    
+    <h3>einkommen &nbsp;<small style="color:var(--muted);font-weight:400">(Verbindung mit personen)</small></h3>
     <table>
       <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
       <tr><td>svnummer</td><td><span class="badge pk">PK</span> <span class="badge typ">VARCHAR(20)</span></td><td>Sozialversicherungsnummer</td></tr>
@@ -136,7 +136,7 @@
       <tr><td>ort</td><td><span class="badge typ">VARCHAR(100)</span></td><td>Veranstaltungsort</td></tr>
     </table>
 
-    <h3>fitmaxx_mitglieder</h3>
+    <h3>fitmaxx_mitglieder &nbsp;<small style="color:var(--muted);font-weight:400">(Verbindung mit personen)</small></h3>
     <table>
       <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
       <tr><td>id</td><td><span class="badge pk">PK</span> <span class="badge typ">VARCHAR(10)</span></td><td>Mitgliedsausweis-Nummer (z. B. „48ZX4F")</td></tr>
@@ -146,7 +146,7 @@
       <tr><td>mitgliedsstatus</td><td><span class="badge typ">VARCHAR(20)</span></td><td>bronze · silber · gold</td></tr>
     </table>
 
-    <h3>fitmaxx_besuche</h3>
+    <h3>fitmaxx_besuche &nbsp;<small style="color:var(--muted);font-weight:400">(Verbindung mit fitmaxx_mitglieder)</small></h3>
     <table>
       <tr><th>Spalte</th><th>Typ</th><th>Bedeutung</th></tr>
       <tr><td>mitgliedsid</td><td><span class="badge fk">FK</span> <span class="badge typ">VARCHAR(10)</span></td><td>→ fitmaxx_mitglieder(id)</td></tr>
